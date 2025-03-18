@@ -1,7 +1,7 @@
 # cpp_Lake-Counting
 C++练习 Lake Counting
 
-# P1596 [USACO10OCT] Lake Counting S
+Lake Counting
 
 题目描述：
 Due to recent rains, water has pooled in various places in Farmer John's field, which is represented by a rectangle of N x M (1 <= N <= 100; 1 <= M <= 100) squares. Each square contains either water ('W') or dry land ('.'). Farmer John would like to figure out how many ponds have formed in his field. A pond is a connected set of squares with water in them, where a square is considered adjacent to all eight of its neighbors. Given a diagram of Farmer John's field, determine how many ponds he has.
@@ -21,3 +21,5 @@ Line 1: The number of ponds in Farmer John's field.
 输出一行，表示水坑的数量。
 
 思路：
+广搜，遍历地图，找到“W”并且没有被标记就进入广搜：将找到的这个放入队列，八个方向遍历，找到就存入队列，直到该位置遍历完毕，出队，开始对下一个位置八方向遍历。
+思路很清晰但是代码没这么简单，写了注释，去看注释把。
